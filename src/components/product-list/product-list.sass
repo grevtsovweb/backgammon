@@ -1,0 +1,322 @@
+.product-list
+    background-color: #B59177
+    padding: 40px
+    box-shadow: 0px 3px 5px rgba(113, 85, 69, 0.7), inset 5px 5px 5px rgba(204, 183, 172, 0.5), inset -4px -4px 6px #644D41
+    border-radius: 20px
+    background-image: url('../img/bg/wood-bg.svg')
+    background-repeat: repeat
+    height: 100%
+    min-height: 625px
+    box-sizing: border-box
+
+    &__content
+
+    &__content-empty
+        margin-left: auto
+        margin-right: auto
+        margin-top: 210px
+        margin-bottom: 210px
+        text-align: center
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        max-width: 290px
+        width: 100%
+
+    &__content-empty-button
+        max-width: 210px
+        width: 100%
+
+    &__content-empty-title
+        margin-top: 0
+        font-size: 18px
+        color: #402E25
+        line-height: 28px
+        margin-bottom: 24px
+        font-family: $black
+
+    &__create
+        max-width: 736px
+        margin-left: auto
+        margin-right: auto
+
+    &__shop-field
+        max-width: 452px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 40px
+
+    &__shop-price
+        display: flex
+        justify-content: center
+        margin-top: 20px
+        font-family: $regular
+        color: #402E25
+
+    &__shop-price-label
+        margin-right: 20px
+
+    &__shop-price-total
+       font-family: $bold
+
+    &__shop-button
+        display: flex
+        justify-content: center
+        margin-top: 16px
+        max-width: 208px
+        margin-left: auto
+        margin-right: auto
+
+    &__shop-list
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-gap: 30px 30px
+
+    &__shop-indicator
+        margin-bottom: 32px
+
+    &__search
+        max-width: 656px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+
+    &__search-form-grid
+        display: flex
+        justify-content: center
+
+    &__search-form
+        margin-bottom: 32px
+
+    &__search-input
+        max-width: 452px
+        width: 100%
+        margin-right: 16px
+
+    &__search-result-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-right: 24px 
+        padding-left: 24px
+        padding-top: 16px
+        padding-bottom: 16px
+
+        &:nth-child(even)
+            background-color: rgba(141, 102, 74, .3)
+
+    &__rating
+        max-width: 465px
+        margin-left: auto
+        margin-right: auto
+
+    &__rating-result-item
+        display: flex
+        align-items: center
+        color: #402E25
+        padding-left: 24px
+        padding-right: 24px
+        padding-top: 12px
+        padding-bottom: 12px
+
+        &:nth-child(even)
+            background-color: rgba(141, 102, 74, .3)
+
+        .avatar-user__name
+            font-family: $medium
+
+    &__rating-result-number
+        width: 50px
+        font-family: $regular
+
+    &__rating-result-points
+        margin-left: auto
+        font-family: $bold
+
+    &__rating-title
+        text-align: center
+        font-size: 32px
+        line-height: 1em
+        margin-top: 0
+        color: #402E25
+
+    &__tournaments-title
+        text-align: center
+        font-size: 32px
+        line-height: 1em
+        margin-top: 0
+        color: #402E25
+
+    
+    &__tournament
+        max-width: 425px
+        margin-left: auto
+        margin-right: auto
+
+    &__tournament-title 
+        font-size: 32px
+        color: #402E25
+        margin-bottom: 0
+        margin-top: 0
+        font-family: $bold
+        text-align: center
+
+    &__tournament-date
+        color: #402E25
+        font-size: 16px
+        font-family: $regular
+        margin-top: 0
+        margin-bottom: 12px
+        text-align: center
+
+    &__tournament-header
+        margin-bottom: 32px
+
+
+
+    &__tournament-game-data
+        padding-top: 16px
+        margin-top: 32px
+        border-top: 2px solid #946F55
+
+        .table-data__row
+            
+            &:nth-child(even)
+                background-color: transparent
+
+        .table-data__item
+            padding-top: 16px
+            padding-bottom: 16px
+
+    &__tournament-game-info
+        .table-data__row
+            
+            &:nth-child(even)
+                background-color: transparent
+
+            &:nth-child(odd)
+                background-color: rgba(141, 102, 74, .3)
+
+
+    &__tournament-info
+        text-align: center
+        color: #402E25
+        font-family: $regular
+        max-width: 272px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 42px
+
+    &__tournament-row
+        align-items: start
+
+    &__profile-editing
+        max-width: 400px
+        margin-left: auto
+        margin-right: auto
+
+    &__profile-statistic
+        max-width: 610px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 0
+    
+    &__profile-statistic-title
+        font-size: 32px
+        margin-bottom: 32px
+        text-align: center
+        color: #402E25
+        margin-top: 0
+        
+    &__profile-statistic-content
+        display: grid
+        grid-template-columns: 120px 1fr
+        grid-column-gap: 64px
+
+    &__profile-statistic-game
+        font-size: 18px
+        color: #402E25
+        font-family: $bold
+        margin-bottom: 24px
+
+    &__profile-statistic-data
+
+        .table-data__item
+            padding-top: 18px
+            padding-bottom: 18px
+
+        .table-data__row
+            &:nth-child(odd)
+                background-color: rgba(141, 102, 74, .3)
+
+            &:nth-child(even)
+                background-color: transparent
+
+    &__tournament-data
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 36px
+        padding-bottom: 36px
+        color: #402E25
+
+    &__tournament-data-title
+        font-size: 16px
+        font-family: $black
+        text-align: center
+        margin-bottom: 36px
+
+    &__tournament-data-download
+        text-align: center
+        margin-bottom: 16px 
+
+    &__tournament-data-count
+        font-size: 48px
+        line-height: 48px
+        text-align: center
+        font-family: $black
+        margin-bottom: 38px
+
+    &__tournament-prize 
+        display: flex
+        justify-content: space-between
+        margin-bottom: 32px
+
+    &__tournament-prize-item
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+
+    &__tournament-prize-value
+        font-size: 20px
+        font-family: $bold
+        margin-bottom: 16px
+
+    &__tournament-prize-image
+       display: flex
+       justify-content: center
+       align-items: center
+
+    &__tournament-prize-place
+        font-size: 16px
+        font-family: $medium
+        margin-top: 20px
+
+    &__tournament-game-title
+        font-size: 20px 
+        text-align: center
+        color: #402E25
+        font-family: $black
+        margin-top: 0
+        margin-bottom: 20px
+
+    &__tournament-row
+        display: grid
+        grid-template-columns: 31.5% 65.7%
+        grid-column-gap: 30px
+
+    &__tournament-row-item
+        background-color: rgba(132, 95, 68, .5)
+        border-radius: 6px

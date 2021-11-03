@@ -1,0 +1,52 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+include button/button-icon 
+include field/field
+include card/card-cube
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Профиль
+                        .layout__page-nav
+                            include nav-bar/nav-bar-profile
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content
+                                    .product-list__profile-editing
+                                        form.form(action="") 
+                                            .form__avatar
+                                                .avatar 
+                                                    .avatar__image 
+                                                        .avatar__image-inner
+                                                            img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                                    .avatar__upload
+                                                        input(type="file", name='avatar').avatar__upload-input
+                                                        +svg('20', '20', 'icon-edit')
+                                            .form__group 
+                                                .field.field--dark
+                                                    label.field__label(for="email") Имя пользователя
+                                                    input.field__input(type="text", placeholder="moiemail@email.ru", value="Player Name" id="email") 
+                                            .form__group 
+                                                .field.field--dark
+                                                    label.field__label(for="password") Пароль
+                                                    input.field__input(type="password", placeholder="Пароль", id="password", value="password") 
+                                            .form__button
+                                                +button('Сохранить', 'button--full-width')
+                                            a(href="#").form__exit Выйти из аккаунта
+                                       

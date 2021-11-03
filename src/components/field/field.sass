@@ -1,0 +1,94 @@
+.field
+    position: relative
+
+    &__label
+        font-size: 14px
+        line-height: 14px
+        color: #ffffff
+        font-family: $medium
+        line-height: 14px
+        margin-bottom: 8px
+        display: block
+        text-align: left
+
+    &__input
+        font-size: 17px 
+        line-height: 22px
+        font-family: $medium
+        background-color: #073225
+        border: none
+        border-radius: 10px
+        color: #ffffff
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 7px
+        padding-bottom: 7px
+        height: 56px
+        box-sizing: border-box
+        width: 100%
+        max-width: 100%
+        transition: all .3s
+        box-shadow: none
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        box-shadow: inset 1px 3px 5px #032017
+            
+
+        &::placeholder
+            color: #A6BCB5
+            
+
+    &--full-width
+        max-width: none
+
+    &--search
+
+        .field__input
+            padding-left: 48px
+            height: 48px
+
+            +md-block()
+                height: 54px
+        
+        &::before
+            width: 18px
+            height: 18px
+            position: absolute
+            left: 20px
+            top: calc(50% - 9px)
+            content: ''
+            background-image: url('../img/sprite/u_search.svg') 
+            background-position: center
+            background-size: 18px 18px
+            background-repeat: no-repeat
+
+    &--dark
+        .field__input
+            background-color: #845F44
+            color: #ffffff
+            box-shadow: inset 1px 3px 5px rgba(0, 0, 0, 0.5)
+
+            &::placeholder
+                color: #d6bba8
+
+        .field__label
+            color: #402E25
+            
+            
+    &--centered
+        text-align: center
+
+        .field__input
+            text-align: center
+
+        .field__label
+            text-align: center
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+    

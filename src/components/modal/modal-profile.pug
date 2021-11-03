@@ -1,0 +1,53 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper
+        .modal
+            .modal__inner
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Профиль
+                .modal__content 
+                    .modal__profile.modal--light-color.modal--padding-56
+                        .modal__profile-data
+                            .modal__profile-user
+                                .avatar 
+                                    .avatar__image 
+                                        .avatar__image-inner
+                                            img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                    .avatar__name Player Name
+                                    .avatar__points-bar 
+                                        include ../points-bar/points-bar
+
+                            .modal__profile-info
+                                .modal__game-finished 
+                                    | Сыграно игр: 
+                                    span.modal__game-finished-value 57
+                                .modal__join-table
+                                    .modal__join-table-row
+                                        .modal__join-table-item Процент побед
+                                        .modal__join-table-item.modal__join-table-item-data 27%
+                                    .modal__join-table-row
+                                        .modal__join-table-item Количество побед
+                                        .modal__join-table-item.modal__join-table-item-data 18
+                                    .modal__join-table-row
+                                        .modal__join-table-item ELO
+                                        .modal__join-table-item.modal__join-table-item-data 0 (- 25)
+                                    .modal__join-table-row
+                                        .modal__join-table-item Сорванных игр
+                                        .modal__join-table-item.modal__join-table-item-data 2
+
+                        .modal__profile-footer
+                            .modal__profile-date
+                                .modal__profile-date-item
+                                    .modal__profile-date-label Дата регистраци
+                                    .modal__profile-date-info 04.05.2021
+                                .modal__profile-date-item
+                                    .modal__profile-date-label Часов в игре
+                                    .modal__profile-date-info 500 
+                            .modal__profile-button 
+                                +button('Играть', 'button--full-width button--medium')
+        

@@ -1,0 +1,13 @@
+include ../button/button
+
+mixin card-cube-rake()
+    .card
+        .card__inner
+            .card__image 
+                include ../../assets/img/cubes/cubes.svg
+            .card__button
+                button.button.button--full-width
+                    span.button__inner
+                        span.button__icon 
+                            include ../../assets/img/icon/icon-chips-black.svg
+                        .button__text 16 000

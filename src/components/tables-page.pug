@@ -1,0 +1,32 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Столы
+                        .layout__page-nav
+                            include nav-bar/nav-bar
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content.product-list__content--center 
+                                    .product-list__content-empty
+                                        p.product-list__content-empty-title Нет созданных столов, но Вы можете создать стол сами
+                                        .product-list__content-empty-button
+                                            +button('Создать стол', 'button--full-width')
+    

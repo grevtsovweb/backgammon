@@ -1,0 +1,24 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__preloader
+                    .layout__preloader-content
+                        .layout__preloader-logo 
+                            include ../assets/img/logo/main-logo.svg
+                        .layout__preloader-indicator
+                            include progress-bar/progress-bar-preloader
+    

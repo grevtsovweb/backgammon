@@ -1,0 +1,58 @@
+.field-count
+    position: relative
+
+    &__input-wrapper
+        display: flex
+        align-items: center
+
+    &__button
+        padding: 0
+        border: 0
+        width: 40px
+        height: 40px
+        background-color: transparent
+        cursor: pointer
+
+        &:hover
+            opacity: .8
+
+        &--minus
+            margin-right: 5px
+
+        &--plus
+            margin-left: 5px
+            transform: rotate(180deg)
+
+    &__label
+        font-size: 14px
+        line-height: 14px
+        color: #402E25
+        font-family: $medium
+        line-height: 14px
+        margin-bottom: 8px
+        display: block
+        text-align: center
+
+    &__input
+        font-size: 17px 
+        line-height: 22px
+        font-family: $medium
+        background-color: #845F44
+        border: none
+        border-radius: 10px
+        color: #ffffff
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 7px
+        padding-bottom: 7px
+        height: 56px
+        box-sizing: border-box
+        width: 100%
+        max-width: 100%
+        transition: all .3s
+        box-shadow: none
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        box-shadow: inset 1px 3px 5px rgba(0, 0, 0, 0.5)
+        text-align: center

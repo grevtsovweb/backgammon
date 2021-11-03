@@ -1,0 +1,44 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper
+        .modal
+            .modal__inner
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Принять вызов
+                .modal__content 
+                    .modal__versus.modal--light-color.modal--padding-56
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+                        .modal__versus-data
+                            .modal__versus-vs vs
+                            .modal__versus-info
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Банк
+                                   .modal__versus-info-points
+                                        include ../chip-item/chip-item
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Время
+                                   .modal__versus-info-points
+                                        include ../clock-item/clock-item-sec
+                            .modal__versus-button 
+                                +button('Играть', 'button--full-width')
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+            

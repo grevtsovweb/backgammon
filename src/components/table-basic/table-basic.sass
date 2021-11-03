@@ -1,0 +1,173 @@
+.table-basic
+    &__rating-result-item 
+        display: flex
+        align-items: center
+        padding-left: 24px
+        padding-right: 24px
+        padding-top: 16px
+        padding-bottom: 16px
+        color: #402E25
+
+        &:nth-child(even)
+            background-color: rgba(141, 102, 74, .3)
+
+    &__rating-result-number
+        width: 50px
+
+    &__rating-result-points
+        margin-left: auto
+        font-family: $bold
+
+    &__row
+        display: flex
+        align-items: center
+        color: #402E25
+        padding-left: 24px
+        padding-right: 24px
+        padding-top: 16px
+        padding-bottom: 16px
+
+        &:nth-child(even)
+            background-color: rgba(141, 102, 74, .3)
+
+    &__item
+
+    &__item-versus
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 38px
+        position: relative
+        min-width: 54%
+
+        a
+            text-decoration: none
+            color: #402E25
+            font-family: $bold
+
+    &__item-id
+        width: 84px
+
+    &__item-button
+        margin-left: auto
+        max-width: 110px
+
+    &__item-place
+        width: 28px
+        font-family: $medium
+
+    &__item-score
+        margin-left: auto
+        display: grid
+        grid-column-gap: 6px
+        grid-template-columns: 24px 24px
+        text-align: center
+        font-family: $bold
+
+    &__item-count
+        font-family: $bold
+        margin-left: auto
+        margin-right: auto
+
+    &__versus-person
+        flex-grow: 1
+
+        &--right
+            text-align: right
+
+    &__versus-text
+        font-size: 16px
+        color: #402E25
+        font-family: $medium
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+    &--transparent
+
+        .table-basic__row
+            background-color: transparent
+
+    &__tournaments-date
+        width: 13.7%
+
+    &__tournaments-prize
+        display: flex
+        width: 28.8%
+
+    &__tournaments-price
+        width: 17.6%
+
+    &__tournaments-item-title
+        width: 27.3%
+
+    &__tournaments-prize-item
+        display: flex
+        align-items: center
+        color: #402E25
+        margin-left: 4px
+        margin-right: 4px
+
+    &__tournaments-prize-status
+        width: 19px
+        height: 19px
+        border-radius: 50%
+        color:  #ffffff
+        font-size: 12px
+        line-height: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 6px
+
+        &--first
+            background-color: #ECB21D
+
+        &--second
+            background-color: #A8A8A8
+
+        &--third
+            background-color: #C34F1D
+
+    &__tournaments-button
+        font-size: 14px
+        line-height: 24px
+        padding-left: 14px
+        padding-right: 14px
+        padding-top: 9px
+        padding-bottom: 7px
+        color: #ffffff
+        border-radius: 4px
+        margin-left: auto
+        border: none
+        font-family: $bold
+        cursor: pointer
+        width: 94px
+        text-align: center
+        display: flex
+        justify-content: center
+
+        &--blue
+            background: #448DA4
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 1px #7CC4DB, inset -1px -1px 1px #1D5A6D, inset -3px -4px 7px #21657A, inset 3px 4px 4px #68AEC4
+            
+
+            &:hover
+                background: #20657B
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 1px #5BADC7, inset -1px -1px 1px #0C4456, inset -3px -4px 7px #145265, inset 3px 4px 4px #4B96AE
+
+        &--green
+            background: #7CA625
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 1px #B6E25B, inset -1px -1px 1px #507308, inset -3px -4px 7px #5C7E15, inset 3px 4px 4px #A1C754
+
+            &:hover
+                background: #618C09
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 1px #A0DC23, inset -1px -1px 1px #416100, inset -3px -4px 7px #4B6B08, inset 3px 4px 4px #92BD3A
+        
+        &--red
+            background: #C5252D
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 1px #F3868B, inset -1px -1px 1px #5A080C, inset -3px -4px 7px #791318, inset 3px 4px 4px #DD5A61
+
+            &:hover
+                background: #760006
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 1px #DF4D54, inset -1px -1px 1px #4E0408, inset -3px -4px 7px #5F070C, inset 3px 4px 4px #C03138  

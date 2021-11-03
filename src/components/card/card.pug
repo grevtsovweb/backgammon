@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin card()
+    .card
+        .card__inner
+            .card__image 
+                include ../../assets/img/card/chips.svg
+                .card__image-text= '19 200' 
+            .card__button
+                button.button.button--full-width
+                    span.button__inner 
+                        | 1 450
+                        span.button__icon-prise
+                            include ../../assets/img/icon/ruble.svg

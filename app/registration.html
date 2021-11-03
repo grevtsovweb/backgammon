@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Backgammon</title>
+    <meta name="description" content="Description">
+    <meta name="keywords" content="Description">
+    <link rel="icon" href="favicon.svg">
+  </head>
+  <body>
+    <div id="app">
+      <div class="layout">
+        <div class="layout__registration">
+          <div class="layout__registration-form"> 
+            <form class="form" action=""> 
+              <h4 class="form__header">Создайте свой аккаунт</h4>
+              <div class="form__container">
+                <div class="form__group"> 
+                  <div class="field">
+                    <label class="field__label" for="email">E-mail</label>
+                    <input class="field__input" type="email" placeholder="moiemail@email.ru" id="email">
+                  </div>
+                </div>
+                <div class="form__group"> 
+                  <div class="field">
+                    <label class="field__label" for="password">Пароль</label>
+                    <input class="field__input" type="password" placeholder="Пароль" id="password">
+                  </div>
+                </div>
+                <div class="form__button">
+                  <button class="button button--full-width"><span class="button__inner">Сохранить</span></button>
+                </div>
+                <div class="form__social-block">
+                  <p class="form__social-header">Войдите с помощью:</p>
+                  <ul class="form__social">
+                    <li class="form__social-item"> <a class="form__social-link" href="#"> 
+                        <svg aria-hidden="true" width="24" height="24">
+                          <use xlink:href="img/social-sprite/social-sprite.svg#icon-apple"></use>
+                        </svg></a></li>
+                    <li class="form__social-item"> <a class="form__social-link" href="#">
+                        <svg aria-hidden="true" width="24" height="24">
+                          <use xlink:href="img/social-sprite/social-sprite.svg#icon-google"></use>
+                        </svg></a></li>
+                    <li class="form__social-item"> <a class="form__social-link" href="#">
+                        <svg aria-hidden="true" width="24" height="24">
+                          <use xlink:href="img/social-sprite/social-sprite.svg#icon-facebook"></use>
+                        </svg></a></li>
+                    <li class="form__social-item"> <a class="form__social-link" href="#">
+                        <svg aria-hidden="true" width="24" height="24">
+                          <use xlink:href="img/social-sprite/social-sprite.svg#icon-vk"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

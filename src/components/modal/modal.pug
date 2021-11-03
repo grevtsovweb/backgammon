@@ -1,0 +1,385 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper.modal__wrapper-js
+        .modal(style="display: none;")
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Выберите игру
+                .modal__content 
+                    .modal__sidebar-block 
+                        ul.modal__sidebar
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link.modal__sidebar-link--active Кавказские
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Накгаммон
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Гипергаммон
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Лонггаммон
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Выстрел наповал
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Ядерные 
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Плакото / Тапа
+                        .modal__sidebar-content.modal--light-color
+                            .modal__sidebar-content-inner
+                                h5.modal__sidebar-content-title Правила
+                                p Начальная расстановка:  
+                                    b Стандартная.
+                                p В этой игре присутствует дополнительная фишка, называющаяся «атомная бомба». В начале игры атомная бомба не принадлежит никому (аналогично кубу удвоения). В любой момент игры каждый из игроков может объявить «атомный взрыв». При этом все одинокие шашки (блоты) считаются побитыми и ставятся на бар, но «бомба» передаётся на сторону противника.
+                            .modal__sidebar-content-button 
+                                +button('Играть', 'button--full-width')
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Выберите ставку для игры
+                .modal__content 
+                    .modal__bid.modal--light-color
+                        .modal__bid-chips
+                            .modal__bid-chips-item 
+                                button.chip.chip--current
+                                    include ../../assets/img/chip/chip.svg
+                                    span.chip__text 50
+                            .modal__bid-chips-item 
+                                button.chip
+                                    include ../../assets/img/chip/chip.svg
+                                    span.chip__text 100
+                            .modal__bid-chips-item 
+                                button.chip
+                                    include ../../assets/img/chip/chip.svg
+                                    span.chip__text 250
+                            .modal__bid-chips-item 
+                                button.chip
+                                    include ../../assets/img/chip/chip.svg
+                                    span.chip__text 500
+                            .modal__bid-chips-item 
+                                button.chip
+                                    include ../../assets/img/chip/chip.svg
+                                    span.chip__text 1000
+                            .modal__bid-chips-item 
+                                button.chip
+                                    include ../../assets/img/chip/chip.svg
+                                    span.chip__text 3000
+                        .modal__bid-text 
+                            .modal__bid-text-inner 
+                                h5.modal__bid-text-title Правила
+                                .modal__table 
+                                    .modal__table-row 
+                                        .modal__table-item Время на партию:
+                                        .modal__table-item.modal__table-item--value 60 сек
+                                    .modal__table-row 
+                                        .modal__table-item Время на ход:
+                                        .modal__table-item.modal__table-item--value 20 сек
+                                    .modal__table-row 
+                                        .modal__table-item Количество партий:
+                                        .modal__table-item.modal__table-item--value 1
+                                    .modal__table-row 
+                                        .modal__table-item Даве (куб удвоения):
+                                        .modal__table-item.modal__table-item--value
+                                    .modal__table-row 
+                                        .modal__table-item Ставка:
+                                        .modal__table-item.modal__table-item--value 50
+                            .modal__bid-text-button
+                                +button('Играть', 'button--full-width')
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Поиск соперника
+                .modal__content 
+                    .modal__versus.modal--light-color.modal--padding-56
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                            img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+                        .modal__versus-data
+                            .modal__versus-vs vs
+                            .modal__versus-info
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Банк
+                                   .modal__versus-info-points
+                                        .modal__versus-info-points-icon
+                                        .modal__versus-info-points-data 1 000
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Время
+                                   .modal__versus-info-points
+                                        .modal__versus-info-points-icon
+                                        .modal__versus-info-points-data 60 сек
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        span.avatar__image-no-avatar ?
+                                .avatar__name Поиск...
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Мы нашли соперника
+                .modal__content 
+                    .modal__versus.modal--light-color.modal--padding-56
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+                        .modal__versus-data
+                            .modal__versus-vs vs
+                            .modal__versus-info
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Банк
+                                   .modal__versus-info-points
+                                        .modal__versus-info-points-icon
+                                        .modal__versus-info-points-data 1 000
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Время
+                                   .modal__versus-info-points
+                                        .modal__versus-info-points-icon
+                                        .modal__versus-info-points-data 60 сек
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Принять вызов
+                .modal__content 
+                    .modal__versus.modal--light-color.modal--padding-56
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+                        .modal__versus-data
+                            .modal__versus-vs vs
+                            .modal__versus-info
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Банк
+                                   .modal__versus-info-points
+                                        .modal__versus-info-points-icon
+                                        .modal__versus-info-points-data 1 000
+                                .modal__versus-info-item 
+                                   .modal__versus-info-label Время
+                                   .modal__versus-info-points
+                                        .modal__versus-info-points-icon
+                                        .modal__versus-info-points-data 60 сек
+                            .modal__versus-button 
+                                +button('Играть', 'button--full-width')
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+            .modal__inner(style=" display:  none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Принять вызов
+                .modal__content 
+                    .modal__versus.modal--light-color.modal--padding-56
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+                        .modal__versus-data
+                            .modal__versus-result
+                                .modal__versus-result-points -230
+                                .modal__versus-result-data
+                                    .modal__versus-result-title Ваш рейтинг
+                                    .modal__versus-table 
+                                        .modal__versus-table-row
+                                            .modal__versus-table-item Дневной
+                                            .modal__versus-table-item 0 (- 184)
+                                        .modal__versus-table-row
+                                            .modal__versus-table-item Общий
+                                            .modal__versus-table-item 0 (- 184)
+                                        .modal__versus-table-row
+                                            .modal__versus-table-item ELO
+                                            .modal__versus-table-item 0 (- 25)
+                                    .modal__versus-result-button Лог матча
+                                    .modal__versus-result-password 
+                                        | Пароль:
+                                        button.modal__versus-copy-password 
+                                            | POdhpl
+                                            span.modal__versus-copy-password-icon
+                                                +svg('24', '24', 'icon-copy')
+                            .modal__versus-button 
+                                +button('Играть еще', 'button--full-width')
+                        .modal__versus-person
+                            .avatar 
+                                .avatar__image 
+                                    .avatar__image-inner
+                                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                .avatar__name Player Name
+                                .avatar__points-bar 
+                                    include ../points-bar/points-bar
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Присоединиться к игре?
+                .modal__content 
+                    .modal__join.modal--light-color
+                        .modal__join-person
+                            .modal__join-person-user
+                                .avatar 
+                                    .avatar__image 
+                                        .avatar__image-inner
+                                            img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                    .avatar__name Player Name
+                                    .avatar__points-bar 
+                                        include ../points-bar/points-bar
+                            .modal__join-table
+                                .modal__join-table-row
+                                    .modal__join-table-item Процент побед
+                                    .modal__join-table-item.modal__join-table-item-data 27%
+                                .modal__join-table-row
+                                    .modal__join-table-item Количество побед
+                                    .modal__join-table-item.modal__join-table-item-data 18
+                                .modal__join-table-row
+                                    .modal__join-table-item ELO
+                                    .modal__join-table-item.modal__join-table-item-data 0 (- 25)
+                                .modal__join-table-row
+                                    .modal__join-table-item Сорванных игр
+                                    .modal__join-table-item.modal__join-table-item-data 2
+                        .modal__join-data
+                            .modal__join-data-header 
+                                span.modal__join-data-player Player Name 
+                                | приглашает Вас присоединиться к игре
+                            .modal__join-data-play Короткие нарды / Кавказские
+                            .modal__join-table
+                                .modal__join-table-row
+                                    .modal__join-table-item Процент побед
+                                    .modal__join-table-item.modal__join-table-item-data 27%
+                                .modal__join-table-row
+                                    .modal__join-table-item Количество побед
+                                    .modal__join-table-item.modal__join-table-item-data 18
+                                .modal__join-table-row
+                                    .modal__join-table-item ELO
+                                    .modal__join-table-item.modal__join-table-item-data 0 (- 25)
+                                .modal__join-table-row
+                                    .modal__join-table-item Сорванных игр
+                                    .modal__join-table-item.modal__join-table-item-data 2
+                            .modal__join-more 
+                                a(href="#") Подробные правила
+                            .modal__join-button-block 
+                                +button('Отклонить', 'button--full-width')
+                                +button('Играть', 'button--full-width')
+            .modal__inner(style="display: none;")
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Присоединиться к игре?
+                .modal__content 
+                    .modal__profile.modal--light-color.modal--padding-56
+                        .modal__profile-data
+                            .modal__profile-user
+                                .avatar 
+                                    .avatar__image 
+                                        .avatar__image-inner
+                                            img(src="img/avatar/avatar.jpg", alt="Player Name")
+                                    .avatar__name Player Name
+                                    .avatar__points-bar 
+                                        include ../points-bar/points-bar
+
+                            .modal__profile-info
+                                .modal__game-finished 
+                                    | Сыграно игр: 
+                                    span.modal__game-finished-value 57
+                                .modal__join-table
+                                    .modal__join-table-row
+                                        .modal__join-table-item Процент побед
+                                        .modal__join-table-item.modal__join-table-item-data 27%
+                                    .modal__join-table-row
+                                        .modal__join-table-item Количество побед
+                                        .modal__join-table-item.modal__join-table-item-data 18
+                                    .modal__join-table-row
+                                        .modal__join-table-item ELO
+                                        .modal__join-table-item.modal__join-table-item-data 0 (- 25)
+                                    .modal__join-table-row
+                                        .modal__join-table-item Сорванных игр
+                                        .modal__join-table-item.modal__join-table-item-data 2
+
+                        .modal__profile-footer
+                            .modal__profile-date
+                                .modal__profile-date-item
+                                    .modal__profile-date-label Дата регистраци
+                                    .modal__profile-date-info 04.05.2021
+                                .modal__profile-date-item
+                                    .modal__profile-date-label Часов в игре
+                                    .modal__profile-date-info 500 
+                            .modal__profile-button 
+                                +button('Играть')
+        .modal-notice(style="display: none;")
+            button.modal-notice__close
+                +svg(24,24,"icon-close")
+            .modal-notice__header
+                h4.modal-notice__title Вы уверены, что хотите выйти?
+            p.modal-notice__subheader-notice Если вы закончите игру сейчас, то потеряете фишки или что-то типа такого написать.
+            .modal-notice__buttons-block 
+                .modal-notice__buttons-block-item
+                    +button('Выйти', 'button--full-width button--small')
+                .modal-notice__buttons-block-item
+                    +button('Играть', 'button--full-width button--small')
+        .modal-notice(style="display: none;")
+            button.modal-notice__close
+                +svg(24,24,"icon-close")
+            .modal-notice__header
+                h4.modal-notice__title Вы хотите предложить удвоние?
+            .modal-notice__buttons-block 
+                .modal-notice__buttons-block-item
+                    +button('Выйти', 'button--full-width button--small')
+                .modal-notice__buttons-block-item
+                    +button('Играть', 'button--full-width button--small')
+        .modal-notice(style="display: none;")
+            button.modal-notice__close
+                +svg(24,24,"icon-close")
+            .modal-notice__header
+                h4.modal-notice__title Попробуйте в другой раз
+            p.modal-notice__subheader-notice Вы не можете пригласить Player Name, так как игрок не в сети или уже играет.
+            .modal-notice__buttons-block 
+                .modal__buttons-block-item
+                    +button('Ок', 'button--full-width button--small')
+        
+.modal-reward__overlay
+    .modal-reward__wrapper
+        .modal-reward
+            h4.modal-reward__title Ваш выбор!
+            .modal-reward__image
+                include ../../assets/img/cubes/cube-reward.svg
+                .modal-reward__image-bg
+                    include ../../assets/img/reward-bg/reward-bg.svg
+            button.modal-reward__text Нажмите, чтобы продолжить
+
+                    
+                        

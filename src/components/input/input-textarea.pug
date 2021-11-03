@@ -1,0 +1,4 @@
+mixin input-textarea(pleceholderName, typeName, nameField, className, index)
+    .input 
+        textarea.input__field.input__field--textarea(placeholder= pleceholderName, type= typeName, name= nameField, class= className, id= index, rows=6)
+        label.input__label(for= index)= pleceholderName

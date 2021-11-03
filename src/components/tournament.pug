@@ -1,0 +1,85 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+include button/button-icon 
+include field/field
+include card/card-cube
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Турниры
+                        .layout__page-nav
+                            include nav-bar/nav-bar-tournament
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content
+                                    .product-list__tournament
+                                        .product-list__tournament-header
+                                            p.product-list__tournament-date 17.08.2021
+                                            h2.product-list__tournament-title Ежедневный турнир
+                                        .product-list__tournament-prize 
+                                            .product-list__tournament-prize-item
+                                                .product-list__tournament-prize-value 2 000
+                                                .product-list__tournament-prize-image
+                                                    include ../assets/img/prize/prize-1.svg
+                                                .product-list__tournament-prize-place 1 место
+                                            .product-list__tournament-prize-item
+                                                .product-list__tournament-prize-value 1 000
+                                                .product-list__tournament-prize-image
+                                                    include ../assets/img/prize/prize-2.svg
+                                                .product-list__tournament-prize-place 2 место
+                                            .product-list__tournament-prize-item
+                                                .product-list__tournament-prize-value 600
+                                                .product-list__tournament-prize-image
+                                                    include ../assets/img/prize/prize-3.svg
+                                                .product-list__tournament-prize-place 3 место
+                                        .product-list__tournament-game-info
+                                            h3.product-list__tournament-game-title Правила турнира
+                                            .table-data
+                                                .table-data__row
+                                                    .table-data__item Время на игру
+                                                    .table-data__item 60 сек
+                                                .table-data__row
+                                                    .table-data__item Время на ход
+                                                    .table-data__item 10 сек
+                                                .table-data__row
+                                                    .table-data__item Очков в матче
+                                                    .table-data__item 1
+                                                .table-data__row
+                                                    .table-data__item Система
+                                                    .table-data__item Швейцарская 2х
+                                        .product-list__tournament-game-data
+                                            .table-data
+                                                .table-data__row
+                                                    .table-data__item Участников: 
+                                                    .table-data__item 0
+                                                .table-data__row
+                                                    .table-data__item Вход
+                                                    .table-data__item 
+                                                        include chip-item/chip-item
+                                                .table-data__row
+                                                    .table-data__item Система
+                                                    .table-data__item 
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                        .product-list__tournament-info
+                                            p 
+                                                | Регистрация начнётся за 15 минут до начала турнира. 
+                                                a(href="#") Подробнее
+                                       

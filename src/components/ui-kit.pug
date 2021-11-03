@@ -1,0 +1,92 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        base(href="https://grevtsovweb.github.io/demo/backgammon")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout(style="padding-top: 50px; padding-bottom: 50px; padding-left: 40px;")
+                .layout__content
+                    h2(style="margin-top: 0;") Страницы
+                    ul.layout__ui-kit(style="margin: 0;")
+                        li.layout__ui-kit-item 
+                            a(href="/preloader.html", style="color: #ffffff;") Загрузка 
+                        li.layout__ui-kit-item 
+                            a(href="/registration.html", style="color: #ffffff;") Регистрация 
+                        li.layout__ui-kit-item 
+                            a(href="/index.html", style="color: #ffffff;") Главная 
+                        li.layout__ui-kit-item 
+                            a(href="/tables.html", style="color: #ffffff;") Выбор игры
+                        li.layout__ui-kit-item 
+                            a(href="/game.html", style="color: #ffffff;") Игра
+                        li.layout__ui-kit-item 
+                            a(href="/tables-page.html", style="color: #ffffff;") Столы
+                        li.layout__ui-kit-item 
+                            a(href="/tables-page-show.html", style="color: #ffffff;") Столы / Просмотр
+                        li.layout__ui-kit-item 
+                            a(href="/tables-page-create.html", style="color: #ffffff;") Столы / Создать
+                        li.layout__ui-kit-item 
+                            a(href="/shop.html", style="color: #ffffff;") Магазин
+                        li.layout__ui-kit-item 
+                            a(href="/inventory.html", style="color: #ffffff;") Инвентарь
+                        li.layout__ui-kit-item 
+                            a(href="/inventory-cubes.html", style="color: #ffffff;") Инвентарь / Кубики
+                        li.layout__ui-kit-item 
+                            a(href="/inventory-table.html", style="color: #ffffff;") Инвентарь / Доски
+                        li.layout__ui-kit-item 
+                            a(href="/rakeback.html", style="color: #ffffff;") Рейкбэк
+                        li.layout__ui-kit-item 
+                            a(href="/search.html", style="color: #ffffff;") Поиск игрока
+                        li.layout__ui-kit-item 
+                            a(href="/rating.html", style="color: #ffffff;") Рэйтинг
+                        li.layout__ui-kit-item 
+                            a(href="/tournaments.html", style="color: #ffffff;") Турниры
+                        li.layout__ui-kit-item 
+                            a(href="/tournament.html", style="color: #ffffff;") Турнир
+                        li.layout__ui-kit-item 
+                            a(href="/tournament-registration.html", style="color: #ffffff;") Турнир / Регистрация
+                        li.layout__ui-kit-item 
+                            a(href="/tournament-history.html", style="color: #ffffff;") Турнир / История
+                        li.layout__ui-kit-item 
+                            a(href="/tournament-table.html", style="color: #ffffff;") Турнир / Таблица
+                        li.layout__ui-kit-item 
+                            a(href="/profile.html", style="color: #ffffff;") Профиль / Редактирование
+                        li.layout__ui-kit-item 
+                            a(href="/profile-statistic.html", style="color: #ffffff;") Профиль / Статистика
+                    h2 Модальные окна
+                    ul.layout__ui-kit
+                        li.layout__ui-kit-item 
+                            a(href="/modal-game.html", style="color: #ffffff;") Выбор игры
+                        li.layout__ui-kit-item 
+                            a(href="/modal-bid.html", style="color: #ffffff;") Выберите ставку для игры
+                        li.layout__ui-kit-item 
+                            a(href="/modal-search.html", style="color: #ffffff;") Поиск соперника
+                        li.layout__ui-kit-item 
+                            a(href="/modal-find.html", style="color: #ffffff;") Соперник найден
+                        li.layout__ui-kit-item 
+                            a(href="/modal-vs.html", style="color: #ffffff;") Принять вызов 
+                        li.layout__ui-kit-item 
+                            a(href="/modal-results.html", style="color: #ffffff;") Результат матча
+                        li.layout__ui-kit-item 
+                            a(href="/modal-join.html", style="color: #ffffff;") Присоединиться к игре
+                        li.layout__ui-kit-item 
+                            a(href="/modal-profile.html", style="color: #ffffff;") Профиль
+                        li.layout__ui-kit-item 
+                            a(href="/modal-exit.html", style="color: #ffffff;") Выйти
+                        li.layout__ui-kit-item 
+                            a(href="/modal-double.html", style="color: #ffffff;") Удвоение
+                        li.layout__ui-kit-item 
+                            a(href="/modal-notice.html", style="color: #ffffff;") Уведомление
+                        li.layout__ui-kit-item 
+                            a(href="/modal-reward.html", style="color: #ffffff;") Выбор в магазине
+    

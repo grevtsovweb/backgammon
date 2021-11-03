@@ -1,0 +1,38 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper
+        .modal
+            .modal__inner
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Выберите игру
+                .modal__content 
+                    .modal__sidebar-block 
+                        ul.modal__sidebar
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link.modal__sidebar-link--active Кавказские
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Накгаммон
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Гипергаммон
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Лонггаммон
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Выстрел наповал
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Ядерные 
+                            li.modal__sidebar-item 
+                                a(href="#").modal__sidebar-link Плакото / Тапа
+                        .modal__sidebar-content.modal--light-color
+                            .modal__sidebar-content-inner
+                                h5.modal__sidebar-content-title Правила
+                                p Начальная расстановка:  
+                                    b Стандартная.
+                                p В этой игре присутствует дополнительная фишка, называющаяся «атомная бомба». В начале игры атомная бомба не принадлежит никому (аналогично кубу удвоения). В любой момент игры каждый из игроков может объявить «атомный взрыв». При этом все одинокие шашки (блоты) считаются побитыми и ставятся на бар, но «бомба» передаётся на сторону противника.
+                            .modal__sidebar-content-button 
+                                +button('Играть', 'button--full-width')
+            

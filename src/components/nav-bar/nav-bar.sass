@@ -1,0 +1,52 @@
+.nav-bar
+    background-color: #B59177
+    padding-top: 8px
+    padding-bottom: 8px
+    box-shadow: 0px 3px 5px rgba(113, 85, 69, 0.7), inset 5px 5px 5px rgba(204, 183, 172, 0.5), inset -4px -4px 6px #644D41
+    border-radius: 10px
+    background-image: url('../img/bg/wood-bg.svg')
+    background-repeat: repeat
+
+    &__list
+        list-style: none
+        display: flex
+        padding-left: 22px
+        padding-right: 22px
+        margin-top: 0
+        margin-bottom: 0
+
+    &__item
+        margin-left: 26px
+        margin-right: 26px
+    
+    &__link
+        color: #402E25
+        opacity: .8
+        font-family: $black
+        text-decoration: none
+        padding-bottom: 12px
+        padding-top: 12px
+        display: flex
+
+
+        &:hover
+            opacity: 1
+            font-family: $black
+
+        &--active
+            opacity: 1
+            font-family: $black
+            position: relative
+
+            &::before
+                position: absolute
+                content: ''
+                bottom: 0
+                left: 0
+                display: block
+                height: 4px
+                width: 100%
+                border-radius: 4px
+                background-color: #FEAD12
+                box-shadow: 0px 10px 20px rgba(38, 27, 6, 0.1), inset -1px -1px 4px rgba(38, 27, 6, 0.25), inset 1px 1px 4px rgba(255, 246, 229, 0.6), inset 0px -1px 1px rgba(38, 27, 6, 0.25), inset 0px 1px 1px rgba(255, 246, 230, 0.2)
+        

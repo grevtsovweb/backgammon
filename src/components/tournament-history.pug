@@ -1,0 +1,85 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+include button/button-icon 
+include field/field
+include card/card-cube
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Турниры
+                        .layout__page-nav
+                            include nav-bar/nav-bar-tournament
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content
+                                    .product-list__content
+                                        .product-list__tournament-row
+                                            .product-list__tournament-row-item 
+                                                .product-list__tournament-data
+                                                    .product-list__tournament-data-title Количество туров в турнире
+                                                    .product-list__tournament-data-count 1
+                                                    .product-list__tournament-data-download Скачать полный лог турнира
+                                                    +button('Скачать', 'button--medium')
+                                            .product-list__tournament-row-item
+                                                .table-basic.table-basic--transparent
+                                                    .table-basic__row 
+                                                        .table-basic__item.table-basic__item-id 3529014
+                                                        .table-basic__item.table-basic__item-versus
+                                                            .table-basic__versus-text vs
+                                                            .table-basic__versus-person.table-basic__versus-person--right
+                                                                a(href="#") Player Name Player
+                                                            .table-basic__versus-person
+                                                                 a(href="#") Player Name Player
+                                                        .table-basic__item.table-basic__item-count 1-0
+                                                        .table-basic__item.table-basic__item-button
+                                                            +button-icon('Скачать', 'button--small', 'icon-download')
+                                                    .table-basic__row 
+                                                        .table-basic__item.table-basic__item-id 3529014
+                                                        .table-basic__item.table-basic__item-versus
+                                                            .table-basic__versus-text vs
+                                                            .table-basic__versus-person.table-basic__versus-person--right
+                                                                a(href="#") Player Name Player
+                                                            .table-basic__versus-person
+                                                                 a(href="#") Player Name Player
+                                                        .table-basic__item.table-basic__item-count 10-0
+                                                        .table-basic__item.table-basic__item-button
+                                                            +button-icon('Скачать', 'button--small', 'icon-download')
+                                                    .table-basic__row 
+                                                        .table-basic__item.table-basic__item-id 3529014
+                                                        .table-basic__item.table-basic__item-versus
+                                                            .table-basic__versus-text vs
+                                                            .table-basic__versus-person.table-basic__versus-person--right
+                                                                a(href="#") Player Name Player
+                                                            .table-basic__versus-person
+                                                                 a(href="#") Player Name Player
+                                                        .table-basic__item.table-basic__item-count 1-0
+                                                        .table-basic__item.table-basic__item-button
+                                                            +button-icon('Скачать', 'button--small', 'icon-download')
+                                                    .table-basic__row 
+                                                        .table-basic__item.table-basic__item-id 3529014
+                                                        .table-basic__item.table-basic__item-versus
+                                                            .table-basic__versus-text vs
+                                                            .table-basic__versus-person.table-basic__versus-person--right
+                                                                a(href="#") Player Name Player
+                                                            .table-basic__versus-person
+                                                                 a(href="#") Player Name Player
+                                                        .table-basic__item.table-basic__item-count 1-0
+                                                        .table-basic__item.table-basic__item-button
+                                                            +button-icon('Скачать', 'button--small', 'icon-download')
+                                                    

@@ -1,0 +1,482 @@
+.modal
+    background-color: #845F44
+    margin-left: auto
+    margin-right: auto
+    padding-top: 32px
+    padding-bottom: 24px
+    padding-left: 24px
+    padding-right: 24px
+    position: relative
+    border-radius: 10px
+    max-width: 750px
+    box-sizing: border-box
+    margin-left: auto
+    margin-right: auto
+    box-shadow: inset 5px 5px 5px rgba(204, 183, 172, 0.5), inset -4px -4px 6px #644D41, 0px 3px 5px rgba(113, 85, 69, 0.7)
+    color: #402E25
+    background-image: url('../img/bg/wood-bg.svg')
+    background-repeat: repeat
+
+
+    &__close
+        width: 24px
+        height: 24px
+        position: absolute
+        content: ''
+        right: -40px
+        top: 0
+        padding: 0
+        border: none
+        background-color: transparent
+        cursor: pointer
+
+        &:hover
+            opacity: .7        
+
+        svg
+            width: 100%
+            height: 100%
+            fill: #845F44
+            transition: fill .3s
+
+    &__inner
+        margin-left: auto
+        margin-right: auto
+
+    &__title
+        margin-top: 0
+        margin-bottom: 0
+        font-family: $black
+        font-size: 32px
+
+    &__header
+        line-height: 26px
+        color: #402E25
+        text-align: center
+        margin-bottom: 24px
+        font-size: 20px
+        padding-left: 16px
+        padding-right: 16px
+            
+
+    &__overlay
+        display: block
+        position: fixed
+        top: 0
+        left: 0
+        overflow: hidden
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.6)
+        z-index: 100
+
+        &--active
+            display: block
+
+    &__wrapper
+        position: relative
+        overflow-x: hidden
+        overflow-y: scroll
+        width: 100%
+        height: 100%
+        z-index: 2
+        padding-top: 40px  
+        padding-bottom: 40px
+        box-sizing: border-box
+        background-color: transparent
+
+    &__sidebar-block
+        display: flex
+
+    &__sidebar
+        margin: 0
+        padding: 0
+        list-style: none
+        min-width: 170px
+        padding-right: 24px
+        box-sizing: border-box
+
+    &__sidebar-item:not(:last-child)
+        margin-bottom: 16px
+        
+
+    &__sidebar-link
+        color: #B59177
+        text-decoration: none
+        font-size: 16px
+        line-height: 24px
+        font-family: $bold
+
+        &:hover
+            color: #402E25
+            font-family: $black
+
+        &--active
+            color: #402E25
+            font-family: $black
+
+    &__sidebar-content
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        min-height: 410px
+
+    &__sidebar-content-title
+        font-size: 20px 
+        font-family: $black
+        color: #402E25
+        text-align: center
+        margin-top: 0
+        margin-bottom: 0
+
+    &__sidebar-content-button
+        margin-top: auto
+        margin-left: auto
+        margin-right: auto
+        max-width: 216px
+        width: 100%
+
+    &__bid
+        display: grid
+        grid-column-gap: 48px 
+        grid-template-columns: auto 1fr
+
+
+    &__bid-chips
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 16px 30px
+
+    &__bid-chips-item
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__bid-text
+        display: flex
+        flex-direction: column
+
+    &__bid-text-title
+        font-size: 20px 
+        font-family: $black
+        color: #402E25
+        text-align: center
+        margin-bottom: 20px
+        margin-top: 0
+
+    &__bid-text-button
+        margin-top: auto
+        max-width: 228px  
+        width: 100%  
+        margin-left: auto
+        margin-right: auto
+
+    
+
+    &__table-row
+        display: flex
+        font-size: 16px
+        line-height: 1.2em
+
+    &__table-item
+        padding-top: 12px
+        padding-bottom: 15px
+        width: 50%
+
+    &__table-item--value
+        text-align: right
+        font-family: $bold
+
+    &__versus
+        display: flex
+        justify-content: center
+    
+    &__versus-data
+        flex-basis: 228px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-left: 12px
+        margin-right: 12px
+
+    &__versus-vs
+        font-size: 54px
+        line-height: 54px
+        text-transform: uppercase
+        color: #ffffff
+        margin-top: 32px
+        font-family: $black
+        letter-spacing: -0.02em
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: #92630B
+
+    &__versus-button
+        width: 100%
+        margin-top: 42px
+
+    &__versus-info
+        padding-top: 20px
+        padding-bottom: 20px
+        padding-left: 16px
+        padding-right: 16px
+        border-radius: 6px
+        background-color: #845F44
+        background-image: url('../img/bg/wood-bg.svg')
+        background-repeat: repeat
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+        width: 100%
+        box-sizing: border-box
+        margin-top: 40px
+        max-width: 150px
+
+    &__versus-info-item
+        .chip-item__count,
+        .clock-item__count
+            color: #ffffff
+            font-family: $bold
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+    &__versus-info-label
+        font-size: 14px
+        color: #ffffff
+        line-height: 14px
+        font-family: $regular
+        margin-bottom: 12px
+
+    &__versus-info-points
+        font-family: $bold
+        font-size: 16px
+        line-height: 16px
+        color: #ffffff
+
+    &__versus-result
+        width: 100%
+
+    &__versus-result-points
+        text-align: center
+        font-size: 24px
+        line-height: 24px
+        font-family: $bold
+        margin-bottom: 32px
+
+    &__versus-result-title
+        font-size: 16px
+        line-height: 16px
+        font-family: $bold
+        margin-bottom: 20px
+        text-align: center
+
+    &__versus-result-data
+        max-width: 162px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+
+    &__versus-table
+        width: 100%
+        font-size: 14px
+        line-height: 16px
+
+    &__versus-table-row
+        display: flex
+        justify-content: space-between
+
+    &__versus-table-row:not(:last-child)
+        margin-bottom: 20px
+
+    &__versus-result-button
+        margin-top: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        justify-content: center
+        color: #402E25
+        text-decoration: none
+
+        &:hover
+            opacity: .8
+
+    &__versus-result-button-icon
+        display: flex
+        justify-content: center
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        user-select: none
+        touch-action: manipulation
+        position: relative
+        font-family: $black
+        font-size: 21px
+        line-height: 26px
+        vertical-align: middle
+        text-align: center
+        white-space: normal
+        word-wrap: normal
+        flex-wrap: wrap
+        border: none
+        background-color: $yellow
+        border-radius: 10px
+        color: #ffffff
+        cursor: pointer
+        padding: 6px
+        text-decoration: none
+        box-sizing: border-box
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5), inset 1px 1px 1px #FFEECC, inset -1px -1px 1px #7E5504, inset -3px -4px 7px #AC7000, inset 3px 4px 4px #FFD27C    
+        margin-right: 10px             
+        
+        svg
+            width: 20px
+            height: 20px
+            fill: #ffffff
+
+
+    &__versus-result-password
+        margin-top: 16px   
+        display: flex 
+        align-items: center
+        font-family: $regular
+        margin-left: auto
+        margin-right: auto
+
+    &__versus-copy-password 
+        background-color: transparent
+        border: none
+        color: #402E25
+        display: flex
+        align-items: center
+        font-family: $bold
+        font-size: 16px
+        cursor: pointer
+        padding-left: 14px
+        padding-right: 0
+        line-height: 20px
+
+        &:hover
+            opacity: .7
+
+    &__versus-copy-password-icon
+        width: 24px
+        height: 24px
+        display: flex
+        justify-content: center
+        margin-left: 4px
+
+        svg
+            width: 100%
+            height: 100%
+            fill: #402E25
+
+    &__join
+        display: grid
+        grid-column-gap: 20px
+        grid-template-columns: 260px auto
+
+    &__join-person
+        background-color: #9D785E
+        padding: 24px
+        border-radius: 6px
+        box-shadow: inset 0px 1px 1px #000000
+
+    &__join-person-user
+        margin-bottom: 32px
+
+    &__join-table
+        width: 100%
+        font-size: 16px
+        line-height: 16px
+
+    &__join-table-row
+        display: flex
+        justify-content: space-between
+
+        &:not(:last-child)
+            margin-bottom: 14px
+
+    &__join-table-item-data
+        font-family: $bold
+
+    &__join-data
+        padding-left: 36px
+        padding-right: 36px
+        display: flex
+        flex-direction: column
+
+    &__join-data-header
+        font-size: 18px
+        line-height: 1.2em
+        text-align: center
+        margin-bottom: 32px
+
+    &__join-data-player
+        font-family: $bold
+
+    &__join-data-play
+        text-align: center
+        font-size: 16px
+        line-height: 1.2em
+        font-family: $bold
+        margin-bottom: 24px
+
+    &__join-more
+        display: flex
+        justify-content: center
+        margin-top: 24px
+
+    &__join-button-block
+        margin-top: auto
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 16px 
+
+    &__profile-button
+        max-width: 140px
+        width: 100%
+
+    &__profile-info
+        padding: 24px
+        border: 4px solid #68442A
+        border-radius: 10px
+
+    &__profile-data
+        display: grid
+        grid-template-columns: auto 1fr
+        grid-column-gap: 38px
+
+    &__game-finished 
+        font-family: $bold
+        font-size: 18px
+        line-height: 18px
+        margin-bottom: 24px
+
+    &__profile-footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 54px
+    
+    &__profile-date
+        display: grid
+        grid-template-columns: auto auto
+        grid-column-gap: 48px
+
+    &__profile-date-label
+        margin-bottom: 4px
+
+    &__profile-date-info
+        font-family: $bold
+
+    &--light-color
+        padding: 24px
+        background-color: #EDCBB3
+        border-radius: 6px
+        box-shadow: 0px 3px 5px rgba(113, 85, 69, 0.7), inset 5px 5px 5px rgba(204, 183, 172, 0.5), inset -4px -4px 6px #644D41
+        background-image: url('../img/bg/wood-bg.svg')
+        background-repeat: repeat
+
+    &--notice
+        max-width: 500px
+
+    &--padding-56
+        padding: 54px

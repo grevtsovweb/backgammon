@@ -1,0 +1,87 @@
+.avatar
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+
+    &__image
+        width: 120px
+        height: 120px
+        background-color: transparent
+        display: flex
+        justify-content: center
+        align-items: center
+        background-image: url('../img/avatar-bg/avatar-bg.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+
+    &__image-inner
+        width: 108px
+        height: 108px
+        mask-image: url(../img/avatar-mask/avatar-mask.svg)
+        mask-size: 100% 100%
+        background-color: #073225 
+        display: flex
+        justify-content: center
+        align-items: center
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            display: block
+            
+
+    &__image-no-avatar
+        font-family: $black
+        font-size: 72px
+        line-height: 72px
+        color: #ffffff
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: #92630B
+        margin-top: 8px 
+
+    &__name
+        font-size: 16px
+        line-height: 1em
+        font-family: $bold
+        text-align: center
+        margin-top: 18px
+        color:#402E25
+
+    &__points-bar 
+        margin-top: 14px
+
+    &__upload
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background: linear-gradient(180deg, #AEAEAE 0%, #FEFEFE 100%)
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), inset 1px 2px 3px #FFFFFF, inset -1px -2px 3px rgba(0, 0, 0, 0.5)
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        right: -5px
+        bottom: -5px
+        
+        svg
+            width: 20px
+            height: 20px
+            fill: #402E25
+
+    &__upload-input
+        position: absolute
+        content: ''
+        opacity: 0
+        width: 100%
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        z-index: 2
+        cursor: pointer
+
+        &::-webkit-file-upload-button
+            cursor: pointer

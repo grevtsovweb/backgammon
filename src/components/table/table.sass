@@ -1,0 +1,58 @@
+.table
+    font-size: 16px
+    color: #402E25
+
+    &__row
+        display: flex
+        align-items: center
+
+        &:nth-child(even)
+            background-color: rgba(141, 102, 74, .3)
+
+
+    &__item
+        flex-grow: 1
+
+    &__chip
+        display: flex
+        align-items: center  
+
+    &__chip-icon
+        width: 24px
+        height: 24px
+        margin-right: 8px
+
+    &__chip-value 
+
+    &__row
+        padding-top: 16px
+        padding-bottom: 16px
+
+    &__item
+        padding-left: 24px
+        padding-right: 24px
+        box-sizing: border-box
+        flex-grow: 1
+        flex-basis: 0
+
+        
+        &--button
+            display: flex
+            justify-content: flex-end
+
+        &--id
+            max-width: 150px
+
+        &--count
+            display: flex
+            justify-content: center
+
+        &--vs
+            font-family: $bold
+            max-width: 296px
+            width: 100%
+            flex-basis: 296px
+
+        &--clock
+            display: flex
+            justify-content: center

@@ -1,0 +1,19 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper            
+        .modal-notice
+            button.modal-notice__close
+                +svg(24,24,"icon-close")
+            .modal-notice__header
+                h4.modal-notice__title Вы уверены, что хотите выйти?
+            p.modal-notice__subheader-notice Если вы закончите игру сейчас, то потеряете фишки или что-то типа такого написать.
+            .modal-notice__buttons-block 
+                .modal-notice__buttons-block-item
+                    +button('Выйти', 'button--full-width button--medium button--red')
+                .modal-notice__buttons-block-item
+                    +button('Играть', 'button--full-width button--medium')
+                    
+                        

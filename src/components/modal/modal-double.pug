@@ -1,0 +1,30 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper
+        .modal-notice
+            button.modal-notice__close
+                +svg(24,24,"icon-close")
+            .modal-notice__header
+                .modal-notice__counter 
+                    .modal-notice__counter-inner 2
+                h4.modal-notice__title Вы хотите предложить удвоние?
+            .modal-notice__buttons-block 
+                .modal-notice__buttons-block-item
+                    +button('Выйти', 'button--full-width button--medium button--red')
+                .modal-notice__buttons-block-item
+                    +button('Играть', 'button--full-width button--medium')
+        .modal-notice(style="display: none;")
+            button.modal-notice__close
+                +svg(24,24,"icon-close")
+            .modal-notice__header
+                h4.modal-notice__title Попробуйте в другой раз
+            p.modal-notice__subheader-notice Вы не можете пригласить Player Name, так как игрок не в сети или уже играет.
+            .modal-notice__buttons-block 
+                .modal__buttons-block-item
+                    +button('Ок', 'button--full-width button--medium')
+
+                    
+                        

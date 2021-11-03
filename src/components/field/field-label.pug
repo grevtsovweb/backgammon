@@ -1,0 +1,4 @@
+mixin field-label(pleceholderName, typeName, nameField, className, index)
+    .field(class= className)
+        label.field__label(for= index)= pleceholderName
+        input.field__input(placeholder= pleceholderName, type= typeName, name= nameField, id= index)

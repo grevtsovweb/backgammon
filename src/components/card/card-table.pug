@@ -1,0 +1,9 @@
+include ../button/button
+
+mixin card-table()
+    .card
+        .card__inner
+            .card__image 
+                img(src="img/card/table.png", alt="")
+            .card__button
+                +button('Выбрать', 'button--full-width')

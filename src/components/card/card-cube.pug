@@ -1,0 +1,13 @@
+include ../button/button
+
+mixin card-cube()
+    .card
+        .card__inner
+            .card__image 
+                include ../../assets/img/cubes/cubes.svg
+            .card__button
+                button.button.button--full-width
+                    span.button__inner 
+                        | 1 450
+                        span.button__icon-prise
+                            include ../../assets/img/icon/ruble.svg

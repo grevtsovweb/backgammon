@@ -1,0 +1,88 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+include button/button-icon 
+include field/field
+include card/card-cube
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Поиск игрока
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content
+                                    .product-list__search
+                                        .product-list__search-form
+                                            form(action="#") 
+                                                .product-list__search-form-grid
+                                                    .product-list__search-input
+                                                        +field('Введите имя игрока', 'text', 'player', 'field--dark')
+                                                    .product-list__search-button
+                                                        +button('Найти')
+                                        .product-list__search-result
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                            .product-list__search-result-item 
+                                                .product-list__search-result-name
+                                                    include avatar-user/avatar-user
+                                                .product-list__search-result-status
+                                                    include status/status
+                                             

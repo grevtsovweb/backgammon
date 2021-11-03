@@ -1,0 +1,61 @@
+include ../input/input
+include ../button/button
+include ../avatar/avatar
+
+.modal__overlay
+    .modal__wrapper
+        .modal
+            .modal__inner
+                button.modal__close
+                    +svg(24,24,"icon-close")
+                .modal__header
+                    h4.modal__title Выберите ставку для игры
+                .modal__content 
+                    .modal__bid.modal--light-color
+                        .modal__bid-chips
+                            .modal__bid-chips-item 
+                                button.chip.chip--current
+                                    img(src="img/chip/chip.png", width="105", height="105", alt="")
+                                    span.chip__text 50
+                            .modal__bid-chips-item 
+                                button.chip
+                                    img(src="img/chip/chip.png", width="105", height="105", alt="")
+                                    span.chip__text 100
+                            .modal__bid-chips-item 
+                                button.chip
+                                    img(src="img/chip/chip.png", width="105", height="105", alt="")
+                                    span.chip__text 250
+                            .modal__bid-chips-item 
+                                button.chip
+                                    img(src="img/chip/chip.png", width="105", height="105", alt="")
+                                    span.chip__text 500
+                            .modal__bid-chips-item 
+                                button.chip
+                                    img(src="img/chip/chip.png", width="105", height="105", alt="")
+                                    span.chip__text 1000
+                            .modal__bid-chips-item 
+                                button.chip
+                                    img(src="img/chip/chip.png", width="105", height="105", alt="")
+                                    span.chip__text 3000
+                        .modal__bid-text 
+                            .modal__bid-text-inner 
+                                h5.modal__bid-text-title Правила
+                                .modal__table 
+                                    .modal__table-row 
+                                        .modal__table-item Время на партию:
+                                        .modal__table-item.modal__table-item--value 60 сек
+                                    .modal__table-row 
+                                        .modal__table-item Время на ход:
+                                        .modal__table-item.modal__table-item--value 20 сек
+                                    .modal__table-row 
+                                        .modal__table-item Количество партий:
+                                        .modal__table-item.modal__table-item--value 1
+                                    .modal__table-row 
+                                        .modal__table-item Даве (куб удвоения):
+                                        .modal__table-item.modal__table-item--value Да
+                                    .modal__table-row 
+                                        .modal__table-item Ставка:
+                                        .modal__table-item.modal__table-item--value 50
+                            .modal__bid-text-button
+                                +button('Играть', 'button--full-width')
+            

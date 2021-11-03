@@ -1,0 +1,215 @@
+.layout 
+    width: 100%
+    min-height: 100vh
+    background-color: #01614C
+    background-image: url('../img/bg/main-bg.webp')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    &__registration
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100vh
+
+    &__registration-form
+        max-width: 460px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+
+    &__main-nav-list
+        list-style: none
+        margin: 0
+        padding: 0
+        display: flex
+
+    &__main-nav-item
+        margin-left: 12px
+        margin-right: 12px
+
+    &__main-nav
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        min-height: calc(100vh - 108px)
+        padding-bottom: 108px
+        box-sizing: border-box
+
+    &__main-nav-button
+        margin-top: 46px
+        max-width: 368px
+        width: 100%
+
+    &__page
+        padding-top: 40px
+        max-width: 1170px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        padding-bottom: 40px
+
+    &__page-title
+        font-size: 48px
+        line-height: 1.2em
+        color: #ffffff
+        margin-top: 0
+        margin-bottom: 44px
+        text-align: center
+
+    &__page-nav
+        margin-bottom: 32px
+
+    &__page-data 
+        min-height: 625px
+
+    &__game
+        width: 100%
+        height: 100vh
+        display: flex
+
+    &__game-main
+        flex-grow: 1
+        padding-top: 70px
+        padding-bottom: 70px
+        padding-left: 70px
+        box-sizing: border-box
+        display: flex
+
+    &__game-table
+        display: flex
+        height: 100%
+
+        svg
+            height: 100%
+
+    &__game-info 
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        width: 248px    
+        margin-left: auto
+
+    &__game-control
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0    
+        display: flex
+        justify-content: center
+
+    &__game-control-item
+        margin-left: 8px
+        margin-right: 8px
+
+    &__game-aside
+        margin-left: auto
+        background-color: #B59177
+        background-image: url('../img/bg/wood-bg.svg')
+        background-repeat: repeat
+        padding-top: 75px
+        padding-bottom: 75px
+        padding-left: 80px
+        padding-right: 80px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        min-width: 360px
+        box-sizing: border-box
+
+    &__game-time
+        width: 128px
+        height: 128px
+        border-radius: 50%
+        background-color: #7B6459
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        border: none
+        box-shadow: inset 1px 1px 2px rgba(204, 183, 172, 0.5), inset -2px -2px 2px #644D41
+        background-image: url('../img/bg/wood-bg.svg')
+        background-repeat: repeat
+
+    &__game-time-inner
+        background-color: #B59177
+        width: 112px
+        height: 112px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0px 1px 4px rgba(113, 85, 69, 0.7)
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        background-image: url('../img/bg/wood-bg.svg')
+        background-repeat: repeat
+
+    &__game-time-value
+        font-size: 40px
+        color: #402E25
+        font-family: $bold
+        margin-top: 4px
+
+    &__game-bid 
+        background-color: #FEAD12
+        border-radius: 6px
+        padding: 4px
+        height: 48px
+        box-sizing: border-box
+        margin-bottom: 14px
+
+    &__game-bid-inner
+        width: 100%
+        height: 100%
+        background-color: #073225
+        border-radius: 4px
+        text-align: center
+        line-height: 41px
+        font-size: 16px
+
+    &__game-bid-value
+        font-family: $bold
+        margin-left: 6px
+        font-size: 20px
+
+    &__corner-button
+        position: fixed
+        right: 40px
+        bottom: 40px
+        width: 50px
+        height: 50px
+
+    &__preloader
+        width: 100vw
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__preloader-content
+
+    &__preloader-logo
+        width: 256px
+        height: 256px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 62px
+
+        svg
+            width: 100%
+            height: auto
+
+    &__preloader-indicator
+        width: 512px
+        

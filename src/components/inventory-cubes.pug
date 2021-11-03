@@ -1,0 +1,47 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+include button/button-icon 
+include field-count/field-count
+include field/field-label
+include card/card-cube
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Инвентарь
+                        .layout__page-nav
+                            include nav-bar/nav-bar-inventory
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content
+                                    .product-list__shop
+                                        .product-list__shop-list
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+                                            +card-cube()
+
+                                             

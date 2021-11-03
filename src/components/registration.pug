@@ -1,0 +1,51 @@
+include mixins/svg
+include button/button
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__registration
+                    .layout__registration-form 
+                        form.form(action="") 
+                            h4.form__header Создайте свой аккаунт
+                            .form__container
+                                .form__group 
+                                    .field
+                                        label.field__label(for="email") E-mail
+                                        input.field__input(type="email", placeholder="moiemail@email.ru", id="email") 
+                                .form__group 
+                                    .field
+                                        label.field__label(for="password") Пароль
+                                        input.field__input(type="password", placeholder="Пароль", id="password") 
+                                .form__button
+                                    +button('Сохранить', 'button--full-width')
+                                .form__social-block
+                                    p.form__social-header Войдите с помощью:
+                                    ul.form__social
+                                        li.form__social-item 
+                                            a(href="#").form__social-link 
+                                                svg(aria-hidden="true" width="24" height="24")
+                                                    use(xlink:href="img/social-sprite/social-sprite.svg#icon-apple")
+                                        li.form__social-item 
+                                            a(href="#").form__social-link
+                                                svg(aria-hidden="true" width="24" height="24")
+                                                    use(xlink:href="img/social-sprite/social-sprite.svg#icon-google")
+                                        li.form__social-item 
+                                            a(href="#").form__social-link
+                                                svg(aria-hidden="true" width="24" height="24")
+                                                    use(xlink:href="img/social-sprite/social-sprite.svg#icon-facebook")
+                                        li.form__social-item 
+                                            a(href="#").form__social-link
+                                                svg(aria-hidden="true" width="24" height="24")
+                                                    use(xlink:href="img/social-sprite/social-sprite.svg#icon-vk")
+    

@@ -1,0 +1,41 @@
+header.header
+    .header__container
+        a(href="#").header__logo 
+            include ../../assets/img/logo/logo.svg
+        ul.header__nav 
+            li.header__nav-item
+                a(href="#").header__nav-link.header__nav-link--green
+                    span.header__nav-link-icon
+                        include ../../assets/img/icon/icon-chips.svg
+                    | Магазин
+            li.header__nav-item
+                a(href="#").header__nav-link.header__nav-link--wood
+                    span.header__nav-link-icon
+                        +svg("20", "20", "icon-cup")
+                    | Рейкбек
+        .header__user-block 
+            .header__user 
+                .header__user-data
+                    .header__user-name Player Name
+                    .header__user-points
+                        .header__user-points-icon
+                            include ../../assets/img/chip/chip.svg
+                        .header__user-points-inner
+                            .header__user-points-counter 1059
+                            button.header__user-add-points
+                                +svg('15','15','icon-plus')
+                .header__user-avatar
+                    .header__user-avatar-inner
+                        img(src="img/avatar/avatar.jpg", alt="Player Name")
+            .header__user-arrow
+                +svg("24", "24", "icon-arrow-down")
+            .header__user-block-dropdown
+                .header__user-block-dropdown-inner
+                    .header__user-block-dropdown-item
+                        a(href="#").header__user-block-dropdown-link Профиль
+                    .header__user-block-dropdown-item 
+                        label.sound-toggle.header__user-block-dropdown-link
+                            span Звук
+                            input(type="checkbox" name="toggle" class="sound-toggle__input" id="toggle-sound")
+                    .header__user-block-dropdown-item 
+                        a(href="#").header__user-block-dropdown-link Выйти

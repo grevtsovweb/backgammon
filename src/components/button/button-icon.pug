@@ -1,0 +1,7 @@
+mixin button-icon(text, className, iconName)
+    button.button(class= className)
+        span.button__inner
+            span.button__icon 
+                svg(aria-hidden="true")
+                    use(xlink:href="img/sprite/sprite.svg#" + iconName)
+            .button__text= text

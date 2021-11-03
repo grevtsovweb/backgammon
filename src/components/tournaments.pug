@@ -1,0 +1,201 @@
+include mixins/svg
+include button/button
+include product-item/product-item
+include button/button-icon 
+include field/field
+include card/card-cube
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/style.css")
+        title Backgammon
+        meta(name="description", content="Description")
+        meta(name="keywords", content="Description")
+        link(rel="icon" href="favicon.svg")
+    body
+        #app
+            .layout
+                .layout__header 
+                    include header/header
+                .layout__content
+                    .layout__page 
+                        h1.layout__page-title Турниры
+                        .layout__page-nav
+                            include nav-bar/nav-bar-tournaments
+                        .layout__page-data 
+                            .product-list
+                                .product-list__content
+                                    .product-list__tournaments
+                                        h2.product-list__tournaments-title Завершеные
+                                        .product-list__tournaments-result
+                                            .table-basic
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--blue Объявлен
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        include live-status/live-status
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--green Смотреть
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--blue Объявлен
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--blue Объявлен
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        include live-status/live-status
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--green Смотреть
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--blue Объявлен
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--red Завершен
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        include live-status/live-status
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--green Смотреть
+                                                .table-basic__row
+                                                    .table-basic__tournaments-date
+                                                        .date
+                                                            .date__time 16:00
+                                                            .date__day 17 авг
+                                                    .table-basic__tournaments-item-title Ежедневный турнир
+                                                    .table-basic__tournaments-price
+                                                        include chip-item/chip-item
+                                                    .table-basic__tournaments-prize
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--first 1
+                                                            .table-basic__tournaments-prize-value 2000
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--second 2
+                                                            .table-basic__tournaments-prize-value 1500
+                                                        .table-basic__tournaments-prize-item
+                                                            .table-basic__tournaments-prize-status.table-basic__tournaments-prize-status--third 3
+                                                            .table-basic__tournaments-prize-value 1000
+                                                    button.table-basic__tournaments-button.table-basic__tournaments-button--red Завершен
+                                            
+                                       

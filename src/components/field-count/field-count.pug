@@ -1,0 +1,11 @@
+mixin field-count(pleceholderName, typeName, nameField, className, index)
+    .field-count(class= className)
+        label.field-count__label(for= index)= pleceholderName
+        .field-count__input-wrapper
+            button.field-count__button.field-count__button--minus 
+                span.field-count__button-icon
+                    include ../../assets/img/arrow/arrow.svg
+            input.field-count__input(type='number', min=0, max=1000, value=50, name= nameField, id= index)
+            button.field-count__button.field-count__button--plus
+                span.field-count__button-icon
+                    include ../../assets/img/arrow/arrow.svg
